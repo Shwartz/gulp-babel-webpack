@@ -1,7 +1,17 @@
-var gulp = require('gulp');
-var babel = require('gulp-babel');
-var webpack = require('webpack-stream');
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import babel from 'gulp-babel';
+import webpack from 'webpack-stream';
+import webpackConfig from './webpack.config'
 
+
+gulp.task('babel', () => {
+	return gulp.src('src/*.js')
+		.pipe(babel())
+		.pipe(gulp.dest('target'));
+});
+
+/*
 gulp.task('default', function() {
 	return gulp.src('src/app.js')
 		.pipe(babel({
@@ -9,7 +19,7 @@ gulp.task('default', function() {
 		}))
 		.pipe(gulp.dest('dist/test'));
 
-	/*return gulp.src('source/js/app.js')
+	/!*return gulp.src('source/js/app.js')
 		.pipe(webpack())
-		.pipe(gulp.dest('dist/js/'));*/
-});
+		.pipe(gulp.dest('dist/js/'));*!/
+});*/
