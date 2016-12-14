@@ -1,6 +1,6 @@
-import path from 'path';
+var path = require('path');
 
-module.exports = {
+return {
 	entry: {
 	  preload: './target/main.js'
 	},
