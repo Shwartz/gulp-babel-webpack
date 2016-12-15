@@ -23,4 +23,6 @@ Basic commands:
     - All files will be added to `dev/` directory
  - `$ gulp dist`
     - will create folder `dist/` with CSS and JS minified versions 
+    
+test    
  

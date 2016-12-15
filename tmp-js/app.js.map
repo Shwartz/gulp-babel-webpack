@@ -1,1 +1,0 @@
-{"version":3,"sources":["app.js"],"names":["msg","say"],"mappings":";;AAAA;;;;;;AAEA,IAAIA,MAAM,sBAAY,MAAZ,CAAV;;AAEAA,IAAIC,GAAJ,CAAQ,OAAR","file":"app.js","sourcesContent":["import Message from './modules/Message';\n\nvar msg = new Message('test');\n\nmsg.say('miauu');\n"]}
