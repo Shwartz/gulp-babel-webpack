@@ -24,5 +24,3 @@ Basic commands:
  - `$ gulp dist`
     - will create folder `dist/` with CSS and JS minified versions 
     
-test    
- 
