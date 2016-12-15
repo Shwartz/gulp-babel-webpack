@@ -1,6 +1,5 @@
-import Message from 'modules/Message';
+import Message from './modules/Message';
 
-var msg = Message('test');
+var msg = new Message('test');
 
-msg.say();
-export default Message;
+msg.say('miauu');

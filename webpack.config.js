@@ -1,13 +1,15 @@
 var path = require('path');
 
-return {
-	entry: {
-	  preload: './target/main.js'
-	},
+module.exports = {
+	entry: path.resolve('./tmp-js/app.js'),
 	output: {
-		path: path.join(__dirname, 'dist'),
-		publicPath: '../dist/',
-		filename: '[name].bundle.js',
-		chunkFilename: '[id].bundle.js'
-	}
+		filename: 'magic.js',
+		path: path.resolve('./dist'),
+		libraryTarget: "var",
+	},
+	devtool: 'source-map',
+	// export itself to a global var
 };
+
+
+

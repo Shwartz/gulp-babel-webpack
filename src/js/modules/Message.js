@@ -1,9 +1,9 @@
 class Message {
 	constructor (msg) {
-		this.msg = msg;
+		this.msg = msg || 'vau';
 	}
 
-	say() {
+	say(msg) {
 		console.log('msg: ', msg);
 	}
 }
