@@ -8,7 +8,7 @@ module.exports = {
 		libraryTarget: "var",
 	},
 	devtool: 'source-map',
-	// export itself to a global var
+	/*watch: true,*/
 };
 
 

@@ -26,4 +26,3 @@ var Message = function () {
 }();
 
 exports.default = Message;
-//# sourceMappingURL=Message.js.map

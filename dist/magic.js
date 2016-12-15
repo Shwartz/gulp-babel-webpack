@@ -55,8 +55,6 @@
 	var msg = new _Message2.default('test');
 	
 	msg.say('miauu');
-	//# sourceMappingURL=app.js.map
-
 
 /***/ },
 /* 1 */
@@ -90,8 +88,6 @@
 	}();
 	
 	exports.default = Message;
-	//# sourceMappingURL=Message.js.map
-
 
 /***/ }
 /******/ ]);

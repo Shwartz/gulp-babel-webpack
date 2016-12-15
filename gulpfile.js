@@ -1,3 +1,5 @@
+//webpack --display-error-details
+var path = require('path');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var babel = require('gulp-babel');
@@ -8,16 +10,16 @@ var webpackConfig = require('./webpack.config.js');
 
 gulp.task('babel', () => {
 	return gulp.src('src/js/**/*.js')
-		.pipe(sourcemaps.init())
+		/*.pipe(sourcemaps.init())*/
 		.pipe(babel({
 			presets: ['es2015']
 		}))
-		.pipe(sourcemaps.write('.'))
+		/*.pipe(sourcemaps.write('.'))*/
 		.pipe(gulp.dest('tmp-js'));
 });
+//console.log('NODE_ENV=production: ', NODE_ENV);
 
-
-gulp.task('webpack', ['babel'], function(callback) {
+gulp.task('webpack', ['babel'], (callback) => {
 	//var myConfig = Object.create(webpackConfig);
 	var myConfig = webpackConfig;
 	console.log('MYCONFIG 1: ', myConfig);
@@ -38,15 +40,5 @@ gulp.task('webpack', ['babel'], function(callback) {
 	});
 });
 
-/*
-gulp.task('default', function() {
-	return gulp.src('src/app.js')
-		.pipe(babel({
-			presets: ['es2015']
-		}))
-		.pipe(gulp.dest('dist/test'));
+//NODE_ENV=production
 
-	/!*return gulp.src('source/js/app.js')
-		.pipe(webpack())
-		.pipe(gulp.dest('dist/js/'));*!/
-});*/

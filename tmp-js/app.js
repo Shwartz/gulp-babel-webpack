@@ -9,4 +9,3 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var msg = new _Message2.default('test');
 
 msg.say('miauu');
-//# sourceMappingURL=app.js.map
