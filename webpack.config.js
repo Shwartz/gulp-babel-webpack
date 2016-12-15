@@ -1,15 +1,24 @@
-var path = require('path');
+var PATH = require('path');
 
 module.exports = {
-	entry: path.resolve('./tmp-js/app.js'),
+	entry: {
+		app: PATH.resolve(__dirname, 'src/js/app.js'),
+	},
 	output: {
-		filename: 'magic.js',
-		path: path.resolve('./dist'),
-		libraryTarget: "var",
+		path: PATH.resolve(__dirname, 'dev/js'),
+		filename: 'bundle.js'
 	},
 	devtool: 'source-map',
-	/*watch: true,*/
+	module: {
+		loaders: [
+			{
+				test: /\.js$/,
+				exclude: /(node_modules|bower_components)/,
+				loader: 'babel',
+				query: {
+					presets: ['es2015']
+				}
+			}
+		]
+	}
 };
-
-
-

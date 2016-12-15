@@ -52,9 +52,32 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var msg = new _Message2.default('test');
+	var message = new _Message2.default('Default text');
+	var num = 10;
 	
-	msg.say('miauu');
+	console.log('ahoi: ', num);
+	
+	new Promise(function (resolve, reject) {
+		setTimeout(resolve, 2000);
+	}).then(function () {
+		console.log('Yay it works!');
+	});
+	
+	message.say('Override default text');
+	//debugger;
+	function foo() {
+		var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+		    _ref$bar = _ref.bar,
+		    bar = _ref$bar === undefined ? 'no' : _ref$bar,
+		    _ref$baz = _ref.baz,
+		    baz = _ref$baz === undefined ? 'works!' : _ref$baz;
+	
+		return bar + ', ' + baz;
+	}
+	
+	console.log(foo({
+		bar: 'yay 1'
+	})); // logs 'yay, works!'
 
 /***/ },
 /* 1 */
@@ -71,16 +94,17 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var Message = function () {
-		function Message(msg) {
+		function Message(text) {
 			_classCallCheck(this, Message);
 	
-			this.msg = msg || 'vau';
+			this.text = text || 'Very Default Text';
 		}
 	
 		_createClass(Message, [{
 			key: 'say',
-			value: function say(msg) {
-				console.log('msg: ', msg);
+			value: function say(text) {
+				console.log('MESSAGE MODULE - Your message: ', text || this.text);
+				return 'this is message';
 			}
 		}]);
 	
@@ -91,4 +115,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=magic.js.map
+//# sourceMappingURL=bundle.js.map

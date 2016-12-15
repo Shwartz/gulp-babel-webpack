@@ -1,10 +1,12 @@
 class Message {
-	constructor (msg) {
-		this.msg = msg || 'vau';
+
+	constructor(text) {
+		this.text = text || 'Very Default Text';
 	}
 
-	say(msg) {
-		console.log('msg: ', msg);
+	say(text) {
+		console.log('MESSAGE MODULE - Your message: ', text || this.text);
+		return 'this is message';
 	}
 }
 
